@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+
+	<style>
+		.header{border:1px solid #ccc;}
+		.logo a{background: url(img/logo.jpg);width:350px;height:200px;}
+		.logo .list{width:600px;margin-top:60px;}
+		.logo .list li{float:left;font-size: 30px;padding:0 30px;margin-right:30px;cursor: pointer;color:#ccc;}
+		.logo .list li.on{background:aqua;color:#000;border-radius: 
+			10px 10px;}
+		.logo .list li:hover{background:aqua;color:#000;border-radius: 
+			10px 10px;}
+		.logo .text{width:600px;font-size: 20px;margin-left: 350px;padding-top: 20px;}
+		.play{width:1170px;height:370px;margin:20px auto;position:relative;overflow: hidden;}
+		.play ol{position:absolute;right:40%;bottom:15px;z-index: 999;}
+		.play ol li{float: left;padding:3px 8px;color:#fff;font-weight: bold;background:#F6AA4E;margin: 0 3px;border:1px solid #ccc;font-size: 14px;border-radius:50%;}
+		.play ol .active{background: #000;}
+		.play ul{position:absolute;left:0;top: 0;width:5850px;height: 370px;}
+		.play ul li{float:left;}
+	</style>
+	 <script src="js/sea.js" data-main="js/sea-init.js"></script>
+	<script>
+	// 	window.onload=function(){
+	// 		var oPlay=document.getElementById('play');
+	// 		var aBtn=oPlay.getElementsByTagName('ol')[0].getElementsByTagName('li');
+	// 		var oUl=oPlay.children[1];
+
+	// 		var timer=null;
+	//     	for (var i = 0; i < aBtn.length; i++) {
+	//     		aBtn[i].index=i;
+	//     		aBtn[i].onclick=function(){
+
+	//     			for (var i = 0; i < aBtn.length; i++) {
+	//     				aBtn[i].className='';
+	//     			};
+	//     			this.className='active';
+	//     			// oUl.style.left=-oPlay.offsetWidth*(this.index)+'px';
+	//     			move(oUl,{
+	//     				'left':-oPlay.offsetWidth*(this.index)
+	//     			})
+	//     		}
+	//     	};
+	//     	clearInterval(timer);
+	//     	clock();	    		    	
+	//     	function clock(){
+	//     		var n=0;
+	//     		timer=setInterval(function(){
+	// 	           	n++;
+	// 	            if(n==5){
+	// 	            	n=0;
+	// 	            }
+	// 	            for(var i=0;i<aBtn.length;i++){
+	// 	            	aBtn[i].className='';
+	// 	            }
+	// 	            aBtn[n].className='active';
+	// 	           	move(oUl,{'left':-oPlay.offsetWidth*n})	            	       
+	//     		},2000);
+	//     	}
+	    	
+	//     	oUl.onmouseover=function(){
+	//     		clearInterval(timer);
+	//     	}
+	//     	oUl.onmouseout=function(){
+	//     		clock();
+	//     	}
+
+	//     	var oMove=document.getElementById('move-list');
+	//     	var aList=oMove.getElementsByTagName('div');
+	    	
+	//     	for (var i = 0; i < aList.length; i++) {
+	//     		aList[i].onmouseover=function(){
+	//     			move(this,{'top':-40},{duration:500})
+	//     		}
+	//     		aList[i].onmouseout=function(){
+	//     			move(this,{'top':0},{duration:500})
+	//     		}
+	//     	};
+	    
+	// 	}
+	// </script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo clearfix">
+			<a href="#" class="fl"></a>
+			<ul class="list fr">
+				<li class="on">首页</li>
+				<li>真实案例</li>
+				<li>联系方式</li>
+			</ul>
+			<p class="fl text">安阳溢彩画艺 全国范围内承接大型壁画工程，游乐场、样板房、3D立体画等。客服QQ2906721651电话18317773235</p>
+		</div>
+		<div class="play" id="play">
+			<ol>
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			<ul>
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+				<li><img src="img/5.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+	<style>
+		.content{width: 1170px;margin:20px auto;text-align: center;}
+		.content h1{font-size: 30px;margin:10px;}
+		.content ul{width:1170px;}
+		.content ul li{float:left;width:370px;height: 300px;overflow: hidden;margin:10px;position:relative;}
+		.content ul li div{position:absolute;width:370px;height: 300px;left:0;top:0;}
+		.content ul li img{width: 370px;height: 300px;}
+		.content ul li p{width:370px;height: 40px;background: #000;text-align: center;line-height: 40px;font-size: 20px;color:#fff;}
+	</style>
+	<div class="content">
+		<h1>项目分类介绍</h1>
+		<div class="content-box">
+			<ul class="clearfix" id="move-list">
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>				
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>
+				<li>
+					<div>
+						<img src="img/6.jpg" alt="">
+						<p>时尚效果</p>
+					</div>					
+				</li>			
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
